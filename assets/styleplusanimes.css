@@ -1,0 +1,267 @@
+/* resetator*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    font-weight:bold;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*Cabeçalho*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap; /*Impede esmagamento*/
+
+    padding: 20px clamp(20px, 5vw, 80px); /*clamp(Mínimo, Responsivo, Máximo)*/
+    margin-bottom: 40px;
+
+    background: 
+    linear-gradient(
+        to right, 
+        #000000,
+        #1a0000,
+        #400000
+    );
+
+    box-shadow: 
+    0 4px 20px rgba(255,0,0,0.3);
+}
+
+/*Título principal*/
+header h1{
+    font-size: 60px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    color: red;
+}
+
+.logo-titulo img{
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid red;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+nav{
+    display: flex;
+    gap: 15px;
+    margin-right: 20%;
+    margin-top: 25px;
+}
+
+/*Foi usado position: realtive com top para ajustar o alinhamento visual entre o h1 e os links do nav*/
+
+/*Botões de navegação do site*/
+nav a{
+    text-decoration: none;
+    color: white;
+    background-color: #b30000;
+    font-size: 20px;
+
+    padding: 12px 18px;
+    border-radius: 6px;
+
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/*Animação do botão de navegação*/
+nav a:hover{
+    background-color: red;
+    transform: scale(1.08);
+
+    box-shadow: 
+    0 0 15px red;
+
+    letter-spacing: 1px;
+}
+
+/*Ativação do botão de navegação*/
+nav a:active{
+    background-color: #7a0000;
+    transform: translateY(2px);
+    transition: 0.1s;
+
+    transform: scale(1.07);
+    box-shadow: 0 0 5px #7a0000;
+    letter-spacing: 0;
+}
+
+/*Blogs*/
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #111;
+    color: white;
+
+    flex-wrap: wrap;
+
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+
+    text-align: center;
+    margin-bottom: auto;
+    overflow: hidden;
+
+    
+    border-radius: 5px;
+
+    border-left: 4px solid red;
+
+    box-shadow: 
+    0 5px 15px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+}
+
+/*Animação dos blogs*/
+article:hover{
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 0 30px rgba(255,0,0,0.5);
+}
+
+/*Imagens dos blogs*/
+.img-container{
+    overflow: hidden;
+
+    height: 180px;
+    width: 100%;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+/*Animação das imagens dos blogs*/
+.img-container img:hover{
+    transform: scale(1.05);
+}
+
+/*Título dos blogs*/
+article h2{
+    background: 
+    linear-gradient(
+        to right,
+        #b30000,
+        #ff4d4d,
+        #ffffff
+    );
+
+    background-size: 150%;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+/*Descrições dos blogs*/
+.meta{
+    padding: 0px;
+    font-size: 13px;
+}
+
+/*Botões dos blogs*/
+article a{
+    background-color: #b30000;
+    font-size: 20px;
+    font-weight: bold;
+
+    align-self: center;
+    text-decoration: none;
+    color: #ffffff;
+
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*Animação dos botões dos blogs*/
+article a:hover{
+    background-color: red;
+    transform: scale(1.08);
+
+    box-shadow: 
+    0 0 15px red;
+
+    letter-spacing: 1px;
+}
+
+/*Ativação dos botões dos blogs*/
+article a:active{
+    transform: translateY(2px);
+    transition: 0.1s;
+    background-color: #7a0000;
+
+    transform: scale(1.07);
+    box-shadow: 0 0 5px #7a0000;
+    letter-spacing: 0;
+}
+
+/*Rodapé*/
+footer{
+    display: block;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    background: 
+    linear-gradient(
+        to left, 
+        #000000,
+        #1a0000,
+        #400000
+    );
+
+    box-shadow: 0 -4px 20px rgba(255,0,0,0.5);
+}
+
+/*Logo*/
+footer .logo-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+/*Conteúdo do rodapé*/
+footer p{
+    padding: 20px 40px;
+    color: white;
+    text-align: center;
+}
+
+/*copyright*/
+.copyright{
+    text-align: center;
+}
