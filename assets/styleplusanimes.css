@@ -5,8 +5,26 @@
     box-sizing: border-box;
 }
 
+/*=================================================
+                 Variáveis das cores
+===================================================*/
+:root{
+    --color-background: #000000;
+    --color-card: #111111;
+
+    --color-primary: #ff0000; /*serve para hover também*/
+    --color-primary-dark: #b30000;
+    --color-primary-active: #7a0000;
+
+    --color-text: #ffffff;
+}
+
 body{
-    background-color: #000000;
+    background-color: var(--color-background);
+}
+
+/*Tags que sempre precisam estar em negrito*/
+h1, h2, a {
     font-weight:bold;
 }
 
@@ -18,7 +36,9 @@ section{
     gap: 20px;
 }
 
-/*Cabeçalho*/
+/*=================================================
+                    Cabeçalho
+===================================================*/
 header{
     display: flex;
     justify-content: space-between;
@@ -32,7 +52,7 @@ header{
     background: 
     linear-gradient(
         to right, 
-        #000000,
+        var(--color-background),
         #1a0000,
         #400000
     );
@@ -41,20 +61,22 @@ header{
     0 4px 20px rgba(255,0,0,0.3);
 }
 
-/*Título principal*/
+/*=================================================
+                 Título Principal
+===================================================*/
 header h1{
     font-size: 60px;
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    color: red;
+    color: var(--color-primary);
 }
 
 .logo-titulo img{
     width: 150px;
     height: 150px;
 
-    border: 3px solid red;
+    border: 3px solid var(--color-primary);
     border-radius: 50%;
 
     margin-right: 10px;
@@ -69,11 +91,13 @@ nav{
 
 /*Foi usado position: realtive com top para ajustar o alinhamento visual entre o h1 e os links do nav*/
 
-/*Botões de navegação do site*/
+/*=================================================
+            Botões de navegação do site
+===================================================*/
 nav a{
     text-decoration: none;
-    color: white;
-    background-color: #b30000;
+    color: var(--color-text);
+    background-color: var(--color-primary-dark);
     font-size: 20px;
 
     padding: 12px 18px;
@@ -83,35 +107,41 @@ nav a{
     font-weight: bold;
 }
 
-/*Animação do botão de navegação*/
+/*=================================================
+          Animação dos botões de navegação
+===================================================*/
 nav a:hover{
-    background-color: red;
+    background-color: var(--color-primary);
     transform: scale(1.08);
 
     box-shadow: 
-    0 0 15px red;
+    0 0 15px var(--color-primary);
 
     letter-spacing: 1px;
 }
 
-/*Ativação do botão de navegação*/
+/*=================================================
+          Ativação dos botões de navegação
+===================================================*/
 nav a:active{
-    background-color: #7a0000;
+    background-color: var(--color-primary-active);
     transform: translateY(2px);
     transition: 0.1s;
 
     transform: scale(1.07);
-    box-shadow: 0 0 5px #7a0000;
+    box-shadow: 0 0 5px var(--color-primary-active);
     letter-spacing: 0;
 }
 
-/*Blogs*/
+/*=================================================
+                      Cards
+===================================================*/
 article{
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: #111;
-    color: white;
+    color: var(--color-text);
 
     flex-wrap: wrap;
 
@@ -127,7 +157,7 @@ article{
     
     border-radius: 5px;
 
-    border-left: 4px solid red;
+    border-left: 4px solid var(--color-primary);
 
     box-shadow: 
     0 5px 15px rgba(0,0,0,0.5);
@@ -135,7 +165,9 @@ article{
     transition: 0.3s;
 }
 
-/*Animação dos blogs*/
+/*=================================================
+                 Animação dos cards
+===================================================*/
 article:hover{
     transform: translateY(-8px);
 
@@ -143,7 +175,9 @@ article:hover{
     0 0 30px rgba(255,0,0,0.5);
 }
 
-/*Imagens dos blogs*/
+/*=================================================
+                 Imagens dos cards
+===================================================*/
 .img-container{
     overflow: hidden;
 
@@ -162,7 +196,9 @@ article:hover{
     transition: 0.4s;
 }
 
-/*Animação das imagens dos blogs*/
+/*=================================================
+          Animação das imagens dos cards
+===================================================*/
 .img-container img:hover{
     transform: scale(1.05);
 }
@@ -172,9 +208,9 @@ article h2{
     background: 
     linear-gradient(
         to right,
-        #b30000,
+        var(--color-primary-dark),
         #ff4d4d,
-        #ffffff
+        var(--color-text)
     );
 
     background-size: 150%;
@@ -184,21 +220,25 @@ article h2{
     color: transparent;
 }
 
-/*Descrições dos blogs*/
+/*=================================================
+                Descrição dos cards
+===================================================*/
 .meta{
     padding: 0px;
     font-size: 13px;
 }
 
-/*Botões dos blogs*/
+/*=================================================
+                 Botões dos cards
+===================================================*/
 article a{
-    background-color: #b30000;
+    background-color: var(--color-primary-dark);
     font-size: 20px;
     font-weight: bold;
 
     align-self: center;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-text);
 
     padding: 10px;
     margin-bottom: 10px;
@@ -207,29 +247,35 @@ article a{
     transition: 0.3s;
 }
 
-/*Animação dos botões dos blogs*/
+/*=================================================
+            Animação dos botões dos cards
+===================================================*/
 article a:hover{
-    background-color: red;
+    background-color: var(--color-primary);
     transform: scale(1.08);
 
     box-shadow: 
-    0 0 15px red;
+    0 0 15px var(--color-primary);
 
     letter-spacing: 1px;
 }
 
-/*Ativação dos botões dos blogs*/
+/*=================================================
+            Ativação dos botões dos cards
+===================================================*/
 article a:active{
     transform: translateY(2px);
     transition: 0.1s;
-    background-color: #7a0000;
+    background-color: var(--color-primary-active);
 
     transform: scale(1.07);
-    box-shadow: 0 0 5px #7a0000;
+    box-shadow: 0 0 5px var(--color-primary-active);
     letter-spacing: 0;
 }
 
-/*Rodapé*/
+/*=================================================
+                      Rodapé
+===================================================*/
 footer{
     display: block;
     margin-top: 100px;
@@ -238,7 +284,7 @@ footer{
     background: 
     linear-gradient(
         to left, 
-        #000000,
+        var(--color-background),
         #1a0000,
         #400000
     );
@@ -246,7 +292,9 @@ footer{
     box-shadow: 0 -4px 20px rgba(255,0,0,0.5);
 }
 
-/*Logo*/
+/*=================================================
+                      Logo
+===================================================*/
 footer .logo-titulo{
     display: flex;
     justify-content: center;
@@ -254,14 +302,18 @@ footer .logo-titulo{
     padding-top: 15px;
 }
 
-/*Conteúdo do rodapé*/
+/*=================================================
+                Conteúdo do rodapé
+===================================================*/
 footer p{
     padding: 20px 40px;
-    color: white;
+    color: var(--color-text);
     text-align: center;
 }
 
-/*copyright*/
+/*=================================================
+                    Copyright
+===================================================*/
 .copyright{
     text-align: center;
 }
