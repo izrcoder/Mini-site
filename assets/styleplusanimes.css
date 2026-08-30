@@ -31,7 +31,7 @@ h1, h2, a {
 section{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -125,10 +125,9 @@ nav a:hover{
 ===================================================*/
 nav a:active{
     background-color: var(--color-primary-active);
-    transform: translateY(2px);
+    transform: translateY(2px) scale(1.07);
     transition: 0.1s;
 
-    transform: scale(1.07);
     box-shadow: 0 0 5px var(--color-primary-active);
     letter-spacing: 0;
 }
@@ -140,28 +139,20 @@ article{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #111;
-    color: var(--color-text);
 
-    flex-wrap: wrap;
-
-    height: auto;
     width: 100%;
     max-width: 400px;
-    margin-bottom: 10px;
 
+    background-color: var(--color-card);
+    color: var(--color-text);
     text-align: center;
-    margin-bottom: auto;
+
     overflow: hidden;
-
-    
     border-radius: 5px;
-
     border-left: 4px solid var(--color-primary);
 
     box-shadow: 
     0 5px 15px rgba(0,0,0,0.5);
-
     transition: 0.3s;
 }
 
@@ -245,6 +236,7 @@ article a{
     border-radius: 10%;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: auto;
 }
 
 /*=================================================
@@ -264,11 +256,10 @@ article a:hover{
             Ativação dos botões dos cards
 ===================================================*/
 article a:active{
-    transform: translateY(2px);
+    transform: translateY(2px) scale(1.07);
     transition: 0.1s;
     background-color: var(--color-primary-active);
 
-    transform: scale(1.07);
     box-shadow: 0 0 5px var(--color-primary-active);
     letter-spacing: 0;
 }
